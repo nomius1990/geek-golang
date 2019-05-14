@@ -12,7 +12,7 @@ func TestT1(t *testing.T) {
 	t.Log(a)
 
 	tsSF := timeSpent(slowFun)
-	t.Log(tsSF(2))
+	t.Log(tsSF(1))
 }
 
 func slowFun(op int) int {
@@ -47,4 +47,38 @@ func TestMapWithFunValue(t *testing.T) {
 	m[3] = func(op int) int { return op * op * op }
 
 	t.Log(m[1](2), m[2](2), m[3](2))
+}
+
+func TestChangeParams(t *testing.T) {
+
+	t.Log(sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+
+}
+
+func Clear() {
+	fmt.Println("world")
+}
+
+//可变参数
+func sum(ops ...int) int {
+	s := 0
+	for _, op := range ops {
+		s += op
+	}
+	return s
+}
+
+func TestDefer(t *testing.T) {
+
+	defer func() {
+		// t.Log("world")
+		fmt.Println("world")
+	}()
+
+	// defer Clear()
+
+	// t.Log("hello")
+	fmt.Println("hello")
+	panic("Fatal error") //即使抛出致命错误 仍然会执行
+
 }

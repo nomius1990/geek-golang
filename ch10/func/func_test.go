@@ -56,7 +56,7 @@ func TestChangeParams(t *testing.T) {
 }
 
 func Clear() {
-	fmt.Println("world")
+	fmt.Println("world 定义函数")
 }
 
 //可变参数
@@ -72,10 +72,10 @@ func TestDefer(t *testing.T) {
 
 	defer func() {
 		// t.Log("world")
-		fmt.Println("world")
+		fmt.Println("world--匿名函数")
 	}()
 
-	// defer Clear()
+	defer Clear()
 
 	// t.Log("hello")
 	fmt.Println("hello")

@@ -6,5 +6,6 @@ import (
 )
 
 func TestPackage(t *testing.T) {
-	t.Log(222)
+	t.Log(series.GetFibonacciSerie(5))
+	// t.Log(series.square(6))  //小写的不能被访问到
 }

@@ -6,7 +6,7 @@ import (
 )
 
 func TestT1(t *testing.T) {
-	// t.Log("111")
+	// t.Log("2222")
 	m := cm.CreateConcurrentMap(99)
 	m.Set(cm.StrKey("key"), 10)
 	t.Log(m.Get(cm.StrKey("key")))

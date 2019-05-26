@@ -6,15 +6,6 @@ import (
 	"testing"
 )
 
-/**
-反射会降低程序的性能,可读性比较差
- */
-import (
-	"errors"
-	"reflect"
-	"testing"
-)
-
 func TestDeepEqual(t *testing.T){
 	a := map[int]string{1:"one",2:"two",3:"three"}
 	b := map[int]string{1:"one",2:"two",3:"three"}
